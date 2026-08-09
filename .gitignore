@@ -1,0 +1,8 @@
+# Your actual private data — never commit these
+notes/
+chroma_db/
+logs/
+venv/
+__pycache__/
+*.pyc
+.env

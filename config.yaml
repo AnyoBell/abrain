@@ -1,0 +1,26 @@
+# Personal AGI config — all local, no cloud endpoints
+
+notes_dir: "./notes"
+chroma_dir: "./chroma_db"
+logs_dir: "./logs"
+collection_name: "personal_notes"
+
+# Embedding model — runs locally via sentence-transformers, no API calls
+embedding_model: "BAAI/bge-base-en-v1.5"
+
+# LLM served locally via Ollama (must be pulled first: `ollama pull llama3.1:8b`)
+ollama_model: "llama3.1:8b"
+ollama_host: "http://localhost:11434"
+
+# Chunking
+chunk_size: 800        # characters per chunk
+chunk_overlap: 150
+
+# Retrieval
+top_k: 5                # chunks retrieved per query
+
+system_prompt: |
+  You are a personal assistant with access to the user's own notes and
+  writing. Answer using the retrieved context when relevant. If the context
+  doesn't contain the answer, say so plainly rather than guessing. Never
+  fabricate sources or claim something is in the notes when it isn't.
