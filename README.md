@@ -1,7 +1,6 @@
 # Personal AGI — Local, Private, Open Source
 
-A self-hosted agent that runs entirely on your own hardware: open-weight LLM,
-local embeddings, local vector store. Nothing leaves your machine.
+Self-hosted research agent that delivers a morning brief: the latest cybersecurity news, then a deep dive into one random research topic.
 
 ## Architecture
 
